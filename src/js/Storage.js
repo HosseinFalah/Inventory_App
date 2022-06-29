@@ -50,7 +50,7 @@ class Storage{
         const savedCategories = Storage.getAllCategories()
         // edit => ...save
         // new => ...save
-        const existedItem = savedCategories.find((category) = category.id === categoryToSave.id)
+        const existedItem = savedCategories.find((category) => category.id === categoryToSave.id)
         if (existedItem) {
             // save edit category
             existedItem.title = categoryToSave.title;
