@@ -51,21 +51,13 @@
                         <select name="product-category" id="product-category" class="bg-transparent text-slate-400 rounded-xl w-full"></select>
                     </div>
                     <div class="flex items-center justify-between gap-x-4">
-                        <button class="flex-1 bg-slate-500 text-slate-200 rounded-md py-2">Add New Product</button>
+                        <button id="add-new-product" class="flex-1 bg-slate-500 text-slate-200 rounded-md py-2">Add New Product</button>
                     </div>
                 </form>
             </div>
             <!--Product List-->
             <h2 class="text-xl text-slate-300 font-bold mb-2">Product List</h2>
-            <div class="flex items-center justify-between">
-                <span class="text-slate-400">React.Js</span>
-                <div class="flex items-center gap-x-3">
-                    <span class="text-slate-400">data</span>
-                    <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 text-sm rounded-2xl">Front-End</span>
-                    <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500 border-2 border-slate-300 font-bold text-slate-300">7</span>
-                    <button class="border px-2 py-0.5 rounded-2xl border-red-500 text-red-400"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                </div>
-            </div>
+            <div id="products-list"></div>
             <div class="h-20"></div>
         </div>
     </div>

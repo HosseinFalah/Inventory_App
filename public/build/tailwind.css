@@ -776,6 +776,9 @@ select {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
+.gap-y-2 {
+  row-gap: 0.5rem;
+}
 .rounded-full {
   border-radius: 9999px;
 }

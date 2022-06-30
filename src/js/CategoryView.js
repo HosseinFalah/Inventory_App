@@ -11,7 +11,6 @@ class CategoryView {
     }
 
     addNewCategory(e){
-        console.log(e);
         e.preventDefault();
         const title = categoryTitle.value;
         const description = categoryDescription.value;
