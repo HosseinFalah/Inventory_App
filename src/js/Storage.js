@@ -98,6 +98,12 @@ class Storage{
         }
         localStorage.setItem("products", JSON.stringify(savedProducts))
     }
+
+    static deleteProduct(id){
+        const savedProducts = Storage.getAllProducts();
+        const filteredProducts = savedProducts.filter(product => product.id !== +id);
+        localStorage.setItem("products", JSON.stringify(filteredProducts))
+    }
 }
 
 export default Storage

@@ -728,6 +728,14 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -953,4 +961,27 @@ select {
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+@media (min-width: 640px) {
+
+  .sm\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .sm\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .sm\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (min-width: 768px) {
+
+  .md\:m-0 {
+    margin: 0px;
+  }
 }
