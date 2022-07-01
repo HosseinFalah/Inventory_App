@@ -1,39 +1,3 @@
-const products = [
-    {
-        id: 1,
-        title: "React.js",
-        category: "Front-End",
-        createdAt: "2021-10-31T15:02:00.411Z"
-    },
-    {
-        id: 2,
-        title: "Node.js",
-        category: "BackEnd",
-        createdAt: "2021-10-31T15:03:23.556Z"
-    },
-    {
-        id: 3,
-        title: "Vue.js",
-        category: "Front-End",
-        createdAt: "2022-11-01T10:47:26.889Z"
-    },
-]
-
-const categories = [
-    {
-        id: 1,
-        title: "Front-End",
-        description: "Front-End of applications",
-        createdAt: "2021-11-01T10:47:26.889Z"
-    },
-    {
-        id: 2,
-        title: "Back-End",
-        description: "Back-End of applications",
-        createdAt: "2021-10-01T10:47:26.889Z"
-    },
-]
-
 class Storage{
     // getAllCategories
     static getAllCategories() {
