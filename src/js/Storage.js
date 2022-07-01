@@ -65,12 +65,17 @@ class Storage{
     }
 
     // getAllProducts
-    static getAllProducts(){
+    static getAllProducts(sort = "newest"){
         // Products, category = localStorage => 
         const savedProducts = JSON.parse(localStorage.getItem("products")) || [];
         // Sort => desecnding
         return savedProducts.sort((a, b) => {
-            return new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1
+            // default: newest
+            if (sort === "newest") {
+                return new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1
+            } else if (sort === "oldest"){
+                return new Date(a.createdAt) > new Date(b.createdAt) ? 1 : -1
+            }
         })
     }
 

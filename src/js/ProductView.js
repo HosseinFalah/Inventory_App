@@ -1,11 +1,13 @@
 import Storage from "./Storage.js";
 const addNewProductBtn = document.querySelector("#add-new-product");
 const searchInput = document.querySelector("#search-input");
+const selectedSort = document.querySelector("#sort-products");
 
 class ProductView {
     constructor(){
         addNewProductBtn.addEventListener("click", e => this.addNewProduct(e));
-        searchInput.addEventListener("input", e => this.searchProducts(e))
+        searchInput.addEventListener("input", e => this.searchProducts(e));
+        selectedSort.addEventListener("change", e => this.sortProducts(e))
         this.products = [];
     }
 
@@ -38,7 +40,7 @@ class ProductView {
                         <span class="text-slate-400">${new Date().toLocaleDateString("fa-IR", options)}</span>
                         <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 text-sm rounded-2xl">${selectedCategory.title}</span>
                         <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500 border-2 border-slate-300 font-bold text-slate-300">${product.quantity}</span>
-                        <button class="border px-2 py-0.5 rounded-2xl border-red-500 text-red-400" data-id=${product.id}><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        <button class="border px-2 py-0.5 rounded-2xl border-red-500 text-red-400" data-id=${product.id}><i class="fa fa-trash"></i></button>
                     </div>
                 </div>`
             )
@@ -49,6 +51,12 @@ class ProductView {
         const value = e.target.value.trim().toLowerCase();
         const filteredProducts = this.products.filter(product => product.title.toLowerCase().includes(value))
         this.createProductList(filteredProducts)
+    }
+
+    sortProducts(e) {
+        const value = e.target.value;
+        this.products = Storage.getAllProducts(value)
+        this.createProductList(this.products)
     }
 }
 

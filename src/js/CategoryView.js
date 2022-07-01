@@ -3,10 +3,12 @@ import Storage from "./Storage.js";
 const categoryTitle = document.querySelector("#category-title");
 const categoryDescription = document.querySelector("#category-description");
 const addNewCategoryBtn = document.querySelector("#add-new-category");
+const toggleAddCategoryBtn = document.querySelector("#toggle-add-category");
 
 class CategoryView {
     constructor(){
-        addNewCategoryBtn.addEventListener("click", (e) => this.addNewCategory(e))
+        addNewCategoryBtn.addEventListener("click", e => this.addNewCategory(e));
+        toggleAddCategoryBtn.addEventListener("click", e => this.toggleAddCategory(e))
         this.categories = [];
     }
 

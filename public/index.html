@@ -17,23 +17,26 @@
         <!--app Content-->
         <div class="container max-w-screen-sm mx-auto">
             <!--Category Form-->
-            <div class="mb-6">
-                <h2 class="text-xl text-slate-300 font-bold mb-2">Add New Category</h2>
-                <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4" autocomplete="off">
-                    <div>
-                        <label for="category-title" class="block mb-1 text-slate-400">Title:</label>
-                        <input type="text" name="category-title" id="category-title" class="bg-transparent p-2 rounded-xl border border-slate-500 text-slate-400">
-                    </div>
-                    <div>
-                        <label for="category-description" class="block mb-1 text-slate-400">description:</label>
-                        <textarea type="text" name="category-description" id="category-description" class="bg-transparent p-2 rounded-xl border border-slate-500 text-slate-400 w-full"></textarea>
-                    </div>
-                    <div class="flex items-center justify-between gap-x-4">
-                        <button class="flex-1 border border-slate-400 text-slate-400 rounded-md py-2">Cancel</button>
-                        <button id="add-new-category" class="flex-1 bg-slate-500 text-slate-200 rounded-md py-2">Add New Category</button>
-                    </div>
-                </form>
-            </div>
+            <section>
+                <div class="mb-6 hidden" id="category-wrapper">
+                    <h2 class="text-xl text-slate-300 font-bold mb-2">Add New Category</h2>
+                    <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4" autocomplete="off">
+                        <div>
+                            <label for="category-title" class="block mb-1 text-slate-400">Title:</label>
+                            <input type="text" name="category-title" id="category-title" class="bg-transparent p-2 rounded-xl border border-slate-500 text-slate-400">
+                        </div>
+                        <div>
+                            <label for="category-description" class="block mb-1 text-slate-400">description:</label>
+                            <textarea type="text" name="category-description" id="category-description" class="bg-transparent p-2 rounded-xl border border-slate-500 text-slate-400 w-full"></textarea>
+                        </div>
+                        <div class="flex items-center justify-between gap-x-4">
+                            <button class="flex-1 border border-slate-400 text-slate-400 rounded-md py-2">Cancel</button>
+                            <button id="add-new-category" class="flex-1 bg-slate-500 text-slate-200 rounded-md py-2">Add New Category</button>
+                        </div>
+                    </form>
+                </div>
+                <button id="toggle-add-category" class="text-slate-600 text-lg mb-4 font-medium">Add New Category?</button>
+            </section>
             <!--Product Form-->
             <div class="mb-6">
                 <h2 class="text-xl text-slate-300 font-bold mb-2">Add New Product</h2>
@@ -60,6 +63,14 @@
             <div class="flex items-center justify-between mb-6">
                 <label for="search-input" class="text-slate-500 text-lg">Search</label>
                 <input type="text" name="search-input" id="search-input" class="bg-transparent rounded-xl border border-slate-500 text-slate-400">
+            </div>
+            <div class="flex items-center justify-between mb-6">
+                <label for="sort-products" class="text-slate-500 text-lg">Sort</label>
+                <select type="text" name="sort-products" id="sort-products" class="bg-transparent text-slate-400 rounded-xl w-52">
+                    <option class="bg-slate-500 text-slate-300" value="">Select a Category</option>
+                    <option class="bg-slate-500 text-slate-300" value="newest">NeweSt</option>
+                    <option class="bg-slate-500 text-slate-300" value="oldest">OldeSt</option>
+                </select>
             </div>
             <div id="products-list"></div>
             <div class="h-20"></div>
